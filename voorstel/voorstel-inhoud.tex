@@ -23,7 +23,7 @@
 
 In onze huidige samenleving maakt men in bijna elke job gebruik van digitale technologieën. Zeker na de COVID-19-pandemie namen computervaardigheden aan belang toe aangezien meer werknemers vanop afstand werkten. ~\autocite{NBERw27422}. Zoals blijkt uit gegevens van de Federale Overheidsdienst Economie, beschikken individuen met een lager opleidingsniveau, lager inkomen of hogere leeftijd beschikken vaak niet over de nodige computervaardigheden waardoor ze digitaal uitgesloten worden. ~\autocite{FederalPublicServiceEconomyKloof}.
 
-De Belgische overheid heeft de ambitie om tegen 2030 een digitaal competente samenleving te realiseren, zoals uiteengezet in de 'Digital Decade' visie~\autocite{DigitalDecade2030}. Dit toont de urgentie en het belang aan van het overbruggen van de digitale kloof, vooral op de werkvloer. In dit onderzoek ligt de focus op oudere werknemers in de bedrijfssector, een groep die vaak beperkte toegang heeft tot digitale training en waar de behoefte aan digitale competentie sterk toeneemt. % focus op oudere werknemers en werknemers in KMO's in de gezondheidszorgsector
+De Belgische overheid heeft de ambitie om tegen 2030 een digitaal competente samenleving te realiseren, zoals uiteengezet in de 'Digital Decade' visie~\autocite{DigitalDecade2030}. Dit onderzoeksvoorstel focust zicht op de digitalisering op de werkvloer. Het is de bedoeling om sollicitanten of huidige werknemers met een beperkte ICT-kennis (bijvoorbeeld arbeiders, magazijniers, logistiek medewerkers) te testen op hun computervaardigheden zodat zij zich, indien gewenst, kunnen bijscholen. % focus op oudere werknemers en werknemers in KMO's in de gezondheidszorgsector
 
 Centraal in dit onderzoek staat de vraag hoe de ontwikkeling van een webapplicatie de computervaardigheden van gebruikers op de werkvloer effectief kan beoordelen bijdragen aan het verminderen van digitale uitsluiting? Om deze digitale kloof te overbruggen is er nood aan een webtool om de computervaardigheden van personen te kunnen beoordelen. %Dit onderzoeksvoorstel analyseert het ontwikkelen van een webtool om computervaardigheden op de werkvloer te testen. 
 Deze tool geeft aan welke computervaardigheden sollicitanten best verbeteren en helpt werkgevers bij het beoordelen van sollicitanten. Het doel van de webtool is de digitale kloof op de werkvloer te verkleinen.
@@ -54,6 +54,55 @@ Het resultaat van dit onderzoek is een Proof-of-Concept van een webapplicatie, w
 %   ...'')
 
 %Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
+%PROBLEEMSTELLING
+Volgens een onderzoek van de ~\textcite{VlaamseVeerkracht} mist 46\% van de Vlaamse bevolking van 16 tot 74 jaar de nodige digitale basisvaardigheden: 37\% heeft lage digitale vaardigheden en 8\% heeft geen digitale vaardigheden of heeft geen internet gebruikt in de voorbije 3 maanden.
+
+~\textcite{DigitaleInclusieBarometer} bevestigt in een onderzoek van de Koning Boudewijnstichting dat een groot deel van de Belgen kwetsbaar zijn voor uitsluiting van essentiële diensten zoals werk, onderwijs en gezondheidszorg omdat zij over onvoldoende digitale vaardigheden beschikken.
+
+De digitale ongelijkheid is een realiteit. ~\textcite{IedereenDigitaleKloof} van het Vlaams Steunpunt Nieuwe Geletterdheid merkt in een artikel op dat de digitale kloof geen ééndimensioneel probleem is. \indent Naast het bezit van computers en de instrumentele vaardigheden bestaat de digitale kloof immers uit nog andere facetten. Zo heeft men tevens informatievaardigheden nodig. Dit zijn methodes om online informatie op te sporen: "zoeken, selecteren, begrijpen, evalueren en verwerken". Maar zelfs tot het toepassen van digitale informatievaardigheden op een eenvoudig niveau, namelijk het gebruiken van een zoekmachine, is 1/3 van de Belgische bevolking niet in staat.
+
+De coronapandemie is dé gangmaker geweest voor de digitalisering van de maatschappij. Volgens ~\textcite{Unia} ging het digitaliseringsproces de afgelopen jaren gepaard met het geleidelijk verdwijnen van een aantal fysieke loketten. Daar konden nochtans vele burgers terecht en werden ze geholpen als ze administratieve problemen hadden. Deze toegenomen digitalisering heeft gevolgen op veel maatschappelijke domeinen zoals bankdiensten, mobiliteit, gezondheidszorg en onderwijs.
+
+%VERTELD IN DE INTRODUCTIE: 
+Dit onderzoeksvoorstel richt zich op de digitalisering op de werkvloer, met speciale aandacht voor sollicitanten of huidige werknemers met beperkte ICT-kennis (zoals arbeiders, magazijniers, logistiek medewerkers). Het doel is om hun computervaardigheden te testen en hen de mogelijkheid te bieden zich bij te scholen, in lijn met het doel van de Vlaamse overheid om minstens 80\% van de bevolking digitaal vaardig te maken.
+Binnen dit onderzoek ligt de focus op het testen van essentiële digitale vaardigheden die gedefinieerd worden in het DigComp-raamwerk van het Joint Research Centre van de Europese Commissie. Deze omvatten het opzoeken en verwerken van informatie, het maken van PDF-documenten, het vinden van bestanden op de computer, e-mailen en het uploaden van bestanden. Deze vaardigheden zijn cruciaal voor een effectieve digitale communicatie en organisatie in de moderne werkomgeving (Bron: DigComp Framework).
+Om de computervaardigheden van individuen op een betrouwbare en nauwkeurige manier te beoordelen, is het ontwikkelen van een webapplicatie met concrete ICT-opdrachten gepland. Traditionele vragenlijsten, zoals die op de website van VDAB, bieden vooral theoretische vragen en geven geen nauwkeurig beeld van praktische vaardigheden.
+De geplande webapplicatie zal in tegenstelling tot deze traditionele methoden praktijkgerichte oefeningen bevatten. Dit is in overeenstemming met bevindingen uit onderzoek dat aangeeft dat het onderhouden van georganiseerde informatierepositories bijdraagt aan een groter vertrouwen in eigen kennis (zie: https://onlinelibrary.wiley.com/doi/full/10.1002/acp.3277).
+Daarnaast onderstrepen de DESI-rapporten 2021 en 2022 de noodzaak van dit onderzoek. Het DESI 2022 rapport benadrukt dat, hoewel België goede stappen heeft gemaakt in digitale connectiviteit en de integratie van digitale technologieën in bedrijven, er aanzienlijke ruimte is voor verbetering in digitale vaardigheden in het onderwijs en de bredere beroepsbevolking. Deze contextuele informatie ondersteunt de relevantie van het onderzoeksvoorstel binnen het bredere maatschappelijke en economische kader van België.
+Tot slot biedt het DigComp-raamwerk van het Joint Research Centre van de Europese Commissie een nuttig referentiekader voor het definiëren van digitale competenties en vaardigheden, wat relevant kan zijn voor de ontwikkeling van de webapplicatie %(zie: https://joint-research-centre.ec.europa.eu/digcomp/digcomp-framework_en).
+
+%SOFTWARE
+%uitleggen website
+Bovenvermelde informatie rechtvaardigt de keuze voor een webapplicatie. Immers, gebruikers die over onvoldoende basis ICT-kennis beschikken, slagen er niet in om software correct te installeren. Het gebruik van een webapplicatie maakt het mogelijk om de testen in een veilige virtuele omgeving uit te voeren zodat de gebruiker geen schade kan aanbrengen aan zijn eigen digitale omgeving. De webapplicatie zal dus enkel dienen als communicatie middel tussen de de Windows-omgeving, waar de testen zullen worden uitegvoerd en de gebruiker.
+
+%uitleggen OS
+De keuze voor een Windows-omgeving om computervaardigheidstesten uit te voeren, is ingegeven door de brede verspreiding en populariteit van Windows als besturingssysteem. Volgens een rapport van StatCounter, heeft Windows een aanzienlijk marktaandeel in desktopbesturingssystemen in België, wat de algemene prevalentie en acceptatie ervan in de professionele wereld aantoont~\autocite{StatCounterOSMarketShare}. Dit wordt verder ondersteund door het feit dat Windows vaak het standaard besturingssysteem is bij de aanschaf van nieuwe computers~\autocite{ProfolusWindowsPopularity}.
+
+%uitleggen VM
+Het opzetten van deze Windows-omgevingen kan gebeuren door middel van het gebruiken van een virtualisatiesoftwarepakket.
+
+%uitleggen connectie VM met website
+Er is nood aan een manier om te kunnen interacten met de webapplicatie en een windows omgeving. Om deze windows omgeving te tonen in een website is er een tool nodig om een verbinging te maken met deze windows omgeving. Apache Guacamole is het meest geschikte framework dat ondersteuning biedt voor een verscheidenheid aan protocollen waaronder VNC, RDP, SSH en meer. Hierdoor kun je verschillende soorten externe verbindingen beheren en schakelen tussen diverse systemen zonder de noodzaak van aparte tools. Dit framework biedt geavanceerde beveiligingsfuncties zoals o.a. end-to-end SSL-codering, toegangscontrole op basis van gebruikers en IP-adressen. Apache Guacamole kan eveneens worden geïmplementeerd als een Docker-container, wat de installatie en configuratie vereenvoudigt. Dit vergemakkelijkt het aanpassen van Apache Guacamole aan verschillende omgevingen of het nu on-premises, in de cloud of in een hybride setup is. ~\autocite{ApacheGuacamole} % Nieuw: https://www.ronpub.com/OJCC_2023v8i1n01_Baun.pdf
+
+NoVNC is een minder gebruiksvriendelijk framework. Gebruikers dienen bij NoVNC handmatig VNC-parameters in te voeren en instellingen te configureren, hetgeen technische kennis vereist. Het aanpassen van de gebruikersinterface en functionaliteit van noVNC is technisch uitdagender dan bij Guacamole. ~\autocite{noVNC} %https://novnc.com/noVNC/ 
+Rekening houdend met de doelgroep is het aangewezen om een Apache Guacamole als framework te gebruiken.
+
+%uitleggen testen
+Nu dat er een connectie kan gemaakt worden met de windows-omeginvg om de testen uit te voeren moeten nog de testen ontwikkeld. Op de virtuele windows omgevingen moet er voorg een applicatie geinstalleerd worden om de gebruiker de testen uit te leggen en bovendien data kan bijhouden hoe de testen worden uitgevoerd, hoe lang de testen duren en hoeveel hints er nodig zijn.  Er kan keuze gemaakt worden uit Java of C\# om deze applicatie te ontwikkelen.
+
+
+%Om data uit de virtuele Windows-omgeving te koppelen aan een score, is er nood aan een vooraf geïnstalleerde softwareapplicatie. Er kan keuze gemaakt worden uit Java of C\#. De score van elke test is bepaald door het aantal correct uitgevoerde opdrachten en de tijd die nodig is om de test uit te voeren. Deze score kan opgeslagen worden in CSV-formaat.
+%C# is de beste programmeertaal om de testen te maken voor de windows omgeving.
+%C# maakt gebruik van het .NET Framework (of .NET Core voor cross-platform ontwikkeling) dat uitgebreide ondersteuning biedt voor Windows-ontwikkeling. Het biedt een breed scala aan bibliotheken en hulpmiddelen voor het bouwen van Windows-toepassingen met een rijke gebruikersinterface, services en communicatie.
+
+
+%uitleggen score
+%Om de testresultaten te visualiseren wordt gebruik gemaakt van Pandas. ~\textcite{NVIDIA} besluit: "[Deze visualisatie software beschikt over] robuuste I/O-tools voor het laden van gegevens uit platte bestanden (CSV en delimited), Excel-bestanden, databases en het opslaan/laden van gegevens uit het supersnelle HDF5-formaat" %%https://www.nvidia.com/en-us/glossary/data-science/pandas-python/
+
+Dit geautomatiseerde proces bespaart tijd voor de werkgever en de sollicitant.
+
+Na het verkrijgen van de testresultaten kan de werkgever de sollicitant of huidige werknemer cursussen aanbieden om zijn computervaardigheden bij te schaven. Op die manier zijn werknemers up-to-date met bedrijfsspecfieke software en beschikken ze over basis ICT-kennis. Dit kan een eerste stap zijn naar het verkleinen van de digitale kloof.
+
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
