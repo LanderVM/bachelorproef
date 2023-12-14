@@ -4,51 +4,25 @@
 % Gebaseerd op document class `hogent-article'
 % zie <https://github.com/HoGentTIN/latex-hogent-article>
 
-% Voor een voorstel in het Engels: voeg de documentclass-optie [english] toe.
-% Let op: kan enkel na toestemming van de bachelorproefcoördinator!
 \documentclass{hogent-article}
 
 % Invoegen bibliografiebestand
 \addbibresource{voorstel.bib}
 
-% Informatie over de opleiding, het vak en soort opdracht
 \studyprogramme{Professionele bachelor toegepaste informatica}
 \course{Bachelorproef}
 \assignmenttype{Onderzoeksvoorstel}
-% Voor een voorstel in het Engels, haal de volgende 3 regels uit commentaar
-% \studyprogramme{Bachelor of applied information technology}
-% \course{Bachelor thesis}
-% \assignmenttype{Research proposal}
 
-\academicyear{2023-2024} % TODO: pas het academiejaar aan
+\academicyear{2023-2024}
 
-% TODO: Werktitel
 \title{Ontwikkeling van een webapplicatie voor het beoordelen van computervaardigheden: Een strategie om de digitale kloof op de werkvloer te verkleinen.}
 
-% TODO: Studentnaam en emailadres invullen
 \author{Lander {Van Molle}}
 \email{lander.vanmolle@student.hogent.be}
 
-% TODO: Medestudent
-% Gaat het om een bachelorproef in samenwerking met een student in een andere
-% opleiding? Geef dan de naam en emailadres hier
-% \author{Yasmine Alaoui (naam opleiding)}
-% \email{yasmine.alaoui@student.hogent.be}
 
-% TODO: Geef de co-promotor op
 \supervisor[Co-promotor]{J. {Van der Poten} (Inetum-Realdolmen, \href{mailto:jordi.vanderpoten@inetum-realdolmen.world}{jordi.vanderpoten@inetum-realdolmen.world})}
 
-% Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
-% Kies uit deze lijst:
-%
-% - Mobile \& Enterprise development
-% - AI \& Data Engineering
-% - Functional \& Business Analysis
-% - System \& Network Administrator
-% - Mainframe Expert
-% - Als het onderzoek niet past binnen een van deze domeinen specifieer je deze
-%   zelf
-%
 \specialisation{Mobile \& Enterprise development}
 \keywords{webapplicatie, digitale kloof, computervaardigheden testen}
 
@@ -59,14 +33,12 @@
   %Enkel de methodologie van de abstract moet in de verleden tijd staan
   In de huidige samenleving zijn computervaardigheden van groot belang. Door de toenemende digitalisering van werkprocessen en het dagelijks leven, worden individuen met een lager opleidingsniveau, lager inkomen of hogere leeftijd vaak geconfronteerd met digitale uitsluiting vanwege een gebrek aan basiscomputervaardigheden. Dit leidt tot een aanzienlijke digitale kloof, vooral merkbaar op de werkvloer.
   Om deze vraag te beantwoorden, stelt dit onderzoek voor om een webapplicatie te ontwikkelen die de computervaardigheden van gebruikers op de werkvloer beoordeelt. Naargelang het resultaat van de computervaardig-heidstesten biedt de werkgever de toekomstige of huidige werknemer aan om ICT-cursussen te volgen. Om dit te bereiken werden de meest gevraagde computervaardigheden geselecteerd en werden er testen ontwikkeld om de computervaardigheden van de gebruikers te beoordelen.
-  De testen werden uitgevoerd in een Windows-omgeving en werden in een scenario dat peilden naar de kennis van informatie verwerken, communicatie, (bestanden vinden op pc en installatie software) en tekstverwerking. Na afloop van de testen kreeg de gebruiker een overzicht van zijn prestaties zodat de gebruiker zijn eventuele tekortkomingen kan verbeteren. De tool is een goede manier om de digitale kloof te verkleinen. Individuen krijgen de mogelijkheid om zich bij tescholen.
+  De tests werden uitgevoerd binnen een Windows-omgeving, waarbij de focus lag op scenario's die de vaardigheden in informatieverwerking, communicatie, bestandsbeheer, zoals het lokaliseren van bestanden op de pc en software-installatie, en tekstverwerking toetsten. Na afloop van de testen kreeg de gebruiker een overzicht van zijn prestaties zodat de gebruiker zijn eventuele tekortkomingen kan verbeteren. De tool is een goede manier om de digitale kloof te verkleinen. Individuen krijgen de mogelijkheid om zich bij tescholen.
   In de bedrijfssector kunnen werknemers sollicitanten en personeel testen op eventuele tekortkomingenop het vlak van ICT en hen workshops of cursussen aanbieden. Dit maakt de tool waardevol voor zowel individuenals bedrijven.
 \end{abstract}
 
 \tableofcontents
 
-% De hoofdtekst van het voorstel zit in een apart bestand, zodat het makkelijk
-% kan opgenomen worden in de bijlagen van de bachelorproef zelf.
 \input{voorstel-inhoud}
 
 \printbibliography[heading=bibintoc]

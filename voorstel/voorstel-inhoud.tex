@@ -23,13 +23,14 @@
 
 In onze huidige samenleving maakt men in bijna elke job gebruik van digitale technologieën. Zeker na de COVID-19-pandemie namen computervaardigheden aan belang toe aangezien meer werknemers vanop afstand werkten. ~\autocite{NBERw27422}. Zoals blijkt uit gegevens van de Federale Overheidsdienst Economie, beschikken individuen met een lager opleidingsniveau, lager inkomen of hogere leeftijd beschikken vaak niet over de nodige computervaardigheden waardoor ze digitaal uitgesloten worden. ~\autocite{FederalPublicServiceEconomyKloof}.
 
-De Belgische overheid heeft de ambitie om tegen 2030 een digitaal competente samenleving te realiseren, zoals uiteengezet in de 'Digital Decade' visie~\autocite{DigitalDecade2030}. Dit onderzoeksvoorstel focust zicht op de digitalisering op de werkvloer. Het is de bedoeling om sollicitanten of huidige werknemers met een beperkte ICT-kennis (bijvoorbeeld arbeiders, magazijniers, logistiek medewerkers) te testen op hun computervaardigheden zodat zij zich, indien gewenst, kunnen bijscholen. % focus op oudere werknemers en werknemers in KMO's in de gezondheidszorgsector
+In overeenstemming met de 'Digital Decade' visie van de Belgische overheid, die streeft naar een digitaal competente samenleving tegen 2030 ~\autocite{DigitalDecade2030}, richt dit onderzoeksvoorstel zich op het verminderen van de digitale kloof op de werkvloer. Het is de bedoeling om sollicitanten of huidige werknemers met een beperkte ICT-kennis (bijvoorbeeld arbeiders, magazijniers, logistiek medewerkers) te testen op hun computervaardigheden zodat zij zich, indien gewenst, kunnen bijscholen.
 
-Centraal in dit onderzoek staat de vraag hoe de ontwikkeling van een webapplicatie de computervaardigheden van gebruikers op de werkvloer effectief kan beoordelen bijdragen aan het verminderen van digitale uitsluiting? Om deze digitale kloof te overbruggen is er nood aan een webtool om de computervaardigheden van personen te kunnen beoordelen. %Dit onderzoeksvoorstel analyseert het ontwikkelen van een webtool om computervaardigheden op de werkvloer te testen. 
+Centraal in dit onderzoek staat de vraag: 'Hoe kan een webapplicatie effectief de computervaardigheden van deze werknemers beoordelen en bijdragen aan het verminderen van digitale uitsluiting?' Om deze digitale kloof te overbruggen is er nood aan een webtool om de computervaardigheden van personen te kunnen beoordelen.
 Deze tool geeft aan welke computervaardigheden sollicitanten best verbeteren en helpt werkgevers bij het beoordelen van sollicitanten. Het doel van de webtool is de digitale kloof op de werkvloer te verkleinen.
 
 Het resultaat van dit onderzoek is een Proof-of-Concept van een webapplicatie, waarbij de gebruiker een score ontvangt gebaseerd op correctheid, tijd en het aantal benodigde hints bij elke vraag. Deze scores geven inzicht in de huidige digitale vaardigheden en dienen bovendien ook als leidraad voor gerichte training en ontwikkeling, met als doel het verkleinen van de digitale kloof.
 
+De kern van dit onderzoek richt zich op het ontwerpen en ontwikkelen van computervaardigheidstesten. Dit onderzoek gaat voornamelijk over het maken van de testen, waarbij de focus eerder zal liggen op het correct maken van de testen en het opslaan van de resultaten. Hiervoor zal een eenvoudige website en virtualisatie manier gebruikt worden. Dit betekent dat hoewel het project technische aspecten zoals webontwikkeling en virtualisatie omvat, de nadruk ligt op de ontwikkeling van de testen zelf en de communicatie tussen de testomgeving en de website
 
 %---------- Stand van zaken ---------------------------------------------------
 
@@ -79,54 +80,80 @@ Bovenvermelde informatie rechtvaardigt de keuze voor een webapplicatie. Immers, 
 De keuze voor een Windows-omgeving om computervaardigheidstesten uit te voeren, is ingegeven door de brede verspreiding en populariteit van Windows als besturingssysteem. Volgens een rapport van StatCounter, heeft Windows een aanzienlijk marktaandeel in desktopbesturingssystemen in België, wat de algemene prevalentie en acceptatie ervan in de professionele wereld aantoont~\autocite{StatCounterOSMarketShare}. Dit wordt verder ondersteund door het feit dat Windows vaak het standaard besturingssysteem is bij de aanschaf van nieuwe computers~\autocite{ProfolusWindowsPopularity}.
 
 %uitleggen VM
-Het opzetten van deze Windows-omgevingen kan gebeuren door middel van het gebruiken van een virtualisatiesoftwarepakket.
+Het opzetten van deze Windows-omgevingen kan gebeuren door middel van virtualisatie. 'Met virtualisatie wordt een gesimuleerde, oftewel virtuele, computeromgeving gemaakt, dit in tegenstelling tot een fysieke omgeving. Bij virtualisatie gaat het vaak om door een computer gegenereerde versies van hardware, besturingssystemen, opslagapparaten en meer.'\autocite{MicrosoftVirtualisationDefinition}
+
+Een virtualisatiesoftwarepakket, zoals VirtualBox, wordt gebruikt om virtuele machines te creëren en te beheren op een fysieke computer of server. Dit maakt het mogelijk om meerdere virtuele Windows 10-omgevingen te maken, elk met de vereiste applicatie voor het beoordelen van testen.
+
+De keuze voor VirtualBox is gebaseerd op verschillende factoren, waaronder het feit dat het een populaire en open source virtualisatiesoftware is. Bovendien biedt VirtualBox handige functies zoals het maken van snapshots, waardoor het beheer van virtuele machines efficiënter wordt en het gebruik van bronnen wordt geoptimaliseerd. VBoxManage is een command-line tool waarmee VirtualBox volledig bestuurd kan worden.
+
 
 %uitleggen connectie VM met website
-Er is nood aan een manier om te kunnen interacten met de webapplicatie en een windows omgeving. Om deze windows omgeving te tonen in een website is er een tool nodig om een verbinging te maken met deze windows omgeving. Apache Guacamole is het meest geschikte framework dat ondersteuning biedt voor een verscheidenheid aan protocollen waaronder VNC, RDP, SSH en meer. Hierdoor kun je verschillende soorten externe verbindingen beheren en schakelen tussen diverse systemen zonder de noodzaak van aparte tools. Dit framework biedt geavanceerde beveiligingsfuncties zoals o.a. end-to-end SSL-codering, toegangscontrole op basis van gebruikers en IP-adressen. Apache Guacamole kan eveneens worden geïmplementeerd als een Docker-container, wat de installatie en configuratie vereenvoudigt. Dit vergemakkelijkt het aanpassen van Apache Guacamole aan verschillende omgevingen of het nu on-premises, in de cloud of in een hybride setup is. ~\autocite{ApacheGuacamole} % Nieuw: https://www.ronpub.com/OJCC_2023v8i1n01_Baun.pdf
+Om interactie mogelijk te maken met een Windows-omgeving en deze te integreren in een webapplicatie, is een tool nodig die verbinding kan maken met deze Windows-omgeving. Apache Guacamole is een uiterst geschikt framework dat ondersteuning biedt voor een breed scala aan protocollen, waaronder VNC, RDP, SSH en meer. Hierdoor kun je verschillende soorten externe verbindingen beheren en naadloos schakelen tussen diverse systemen zonder de noodzaak van aparte tools.
 
-NoVNC is een minder gebruiksvriendelijk framework. Gebruikers dienen bij NoVNC handmatig VNC-parameters in te voeren en instellingen te configureren, hetgeen technische kennis vereist. Het aanpassen van de gebruikersinterface en functionaliteit van noVNC is technisch uitdagender dan bij Guacamole. ~\autocite{noVNC} %https://novnc.com/noVNC/ 
-Rekening houdend met de doelgroep is het aangewezen om een Apache Guacamole als framework te gebruiken.
+Met Apache Guacamole kan een beveiligde verbinding worden gemaakt met de virtuele Windows-omgeving. Dit stelt je in staat om veilig en efficiënt te werken in de Windows-omgeving via de webapplicatie.
+
+Wat Apache Guacamole nog krachtiger maakt, zijn de geavanceerde beveiligingsfuncties die het biedt, zoals end-to-end SSL-codering en toegangscontrole op basis van zowel gebruikers als IP-adressen. Hierdoor kun je de beveiliging van je verbindingen op hoog niveau handhaven.. ~\autocite{ApacheGuacamole} % Nieuw: https://www.ronpub.com/OJCC_2023v8i1n01_Baun.pdf
 
 %uitleggen testen
-Nu dat er een connectie kan gemaakt worden met de windows-omeginvg om de testen uit te voeren moeten nog de testen ontwikkeld. Op de virtuele windows omgevingen moet er voorg een applicatie geinstalleerd worden om de gebruiker de testen uit te leggen en bovendien data kan bijhouden hoe de testen worden uitgevoerd, hoe lang de testen duren en hoeveel hints er nodig zijn.  Er kan keuze gemaakt worden uit Java of C\# om deze applicatie te ontwikkelen.
+Nu dat er een connectie kan gemaakt worden met de windows-omeginvg om de testen uit te voeren moeten nog de testen ontwikkeld. Op de virtuele windows omgevingen moet er voorg een applicatie geinstalleerd worden om de gebruiker de testen uit te leggen en bovendien data kan bijhouden hoe de testen worden uitgevoerd, hoe lang de testen duren en hoeveel hints er nodig zijn. C\# is de beste programmeertaal om de testen te maken voor de windows omgeving. C\# maakt gebruik van het .NET Framework dat uitgebreide ondersteuning biedt voor Windows-ontwikkeling. Het biedt een breed scala aan bibliotheken en hulpmiddelen voor het bouwen van Windows-toepassingen met een rijke gebruikersinterface, services en communicatie.
+
+%de gebruiker krijgt een testscenario waarbij hij een bepaalde taak moet uitvoeren. De gebruiker krijgt een score op basis van correctheid, tijd en het aantal benodigde hints bij elke vraag. Als hint kan verduidelijkt worden hoe de taak moet uitgevoerd worden en met welke software dit kan gebeuren.
+
+%Enkele testen die kunnen gemaakt worden zijn het maken van een PDF-document, het vinden van bestanden op de computer, e-mailen en het uploaden van bestanden. Deze vaardigheden zijn cruciaal voor een effectieve digitale communicatie en organisatie in de moderne werkomgeving.
 
 
-%Om data uit de virtuele Windows-omgeving te koppelen aan een score, is er nood aan een vooraf geïnstalleerde softwareapplicatie. Er kan keuze gemaakt worden uit Java of C\#. De score van elke test is bepaald door het aantal correct uitgevoerde opdrachten en de tijd die nodig is om de test uit te voeren. Deze score kan opgeslagen worden in CSV-formaat.
-%C# is de beste programmeertaal om de testen te maken voor de windows omgeving.
-%C# maakt gebruik van het .NET Framework (of .NET Core voor cross-platform ontwikkeling) dat uitgebreide ondersteuning biedt voor Windows-ontwikkeling. Het biedt een breed scala aan bibliotheken en hulpmiddelen voor het bouwen van Windows-toepassingen met een rijke gebruikersinterface, services en communicatie.
-
-
-%uitleggen score
-%Om de testresultaten te visualiseren wordt gebruik gemaakt van Pandas. ~\textcite{NVIDIA} besluit: "[Deze visualisatie software beschikt over] robuuste I/O-tools voor het laden van gegevens uit platte bestanden (CSV en delimited), Excel-bestanden, databases en het opslaan/laden van gegevens uit het supersnelle HDF5-formaat" %%https://www.nvidia.com/en-us/glossary/data-science/pandas-python/
-
-Dit geautomatiseerde proces bespaart tijd voor de werkgever en de sollicitant.
-
-Na het verkrijgen van de testresultaten kan de werkgever de sollicitant of huidige werknemer cursussen aanbieden om zijn computervaardigheden bij te schaven. Op die manier zijn werknemers up-to-date met bedrijfsspecfieke software en beschikken ze over basis ICT-kennis. Dit kan een eerste stap zijn naar het verkleinen van de digitale kloof.
+%uitleggen API
+Er is een noodzaak om de communicatie te kunnen maken met de testen van de virtuele machine en de webapplicatie. Hiervoor wordt een API ontwikkeld. Een API is een set van definities en protocollen waarmee softwareprogramma's met elkaar kunnen communiceren.
+De noodzaak van een API in dit onderzoeksproject ontstaat uit de beperkingen van de webapplicatie om direct te interageren met de Windows-omgevingen, waar de computervaardigheidstests worden uitgevoerd. De API speelt een cruciale rol in het opslaan van testresultaten en het beschikbaar stellen van deze gegevens aan de webapplicatie. Bovendien zal de API gebruikt worden om de virtuele machines op afstand te beheren en te starten.
 
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+%Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+%Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+%Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+%Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+%Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+%Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+
+In de initiële fase van het project, met een duur van twee weken, wordt een requirements-analyse uitgevoerd. Hierbij ligt de focus op het identificeren van welke relevante computervaardigheidstesten kunnen ontwikkeld worden.
+Daarnaast worden de technische en functionele vereisten voor de API, de webapplicatie en de virtuele Windows-omgeving gedetailleerd vastgesteld. Ten slotte omvat deze fase het ontwikkelen van een intuïtief en gebruikersvriendelijk ontwerp voor de UI/UX van de webapplicatie.
+
+De volgende fase van het project heeft een duur van 3 weken. In deze periode wordt een API ontwikkeld. Deze API maakt gebruik van VBoxManage voor het beheer en de opstart van virtuele machines en slaat testresultaten op die beschikbaar worden gesteld aan de webapplicatie. De API is ontworpen om de virtuele machines op afstand te starten en toestaat het opslaan van data in een database.
+
+Gevolgd door de derde fase, die twee weken duurt, wordt de website opgezet om connectie te maken met de virtuele omgeving. De Windows-omgeving wordt geconfigureerd met Apache Guacamole, waardoor gebruikers, zodra zij een test starten op de webapplicatie, kunnen interacteren met de Windows-omgeving via de API.
+
+De vierde fase neemt 4 weken in beslag. Hierbij worden de computervaardigheidstesten ontwikkeld en zal de data na afloop van de test doorgestuurd worden naar de API. Er wordt een applicatie ontwikkeld die in de Windows-omgeving zal runnen. Deze applicatie zal opgestart worden samen met de virtuele Windows-omegving. Deze zal een scenario aan de gebruiker geven waarin hij enkele realistische taken moet uitvoeren. Deze applicatie zal de gemaakte taken controleren en een resultaat toekennen aan deze taken en waarbij vervolgens deze data wordt doorgestuurd naar de webapplicatie.
+
+In de vijfde fase van het project, die 2 weken zal duren, worden de testresultaten vanuit de API opgehaald en in de applicatie weergegeven. Er wordt een overzicht weergegeven van de resultate, van de testen. Op basis van de behaalde scores kunnen tekortkomingen worden geïdentificeerd. De testen zijn opgesteld met als doel de gebruiker te helpen bij het ontwikkelen en verbeteren van zijn computervaardigheden.
+
+Tot slot, in de laatste fase van het project dat 2 weken duurt, wordt een scriptie opgesteld waarin het volledige onderzoek en de behaalde resultaten gedetailleerd worden beschreven. De scriptie vormt een uitgebreid verslag van het uitgevoerde onderzoek, inclusief een beschrijving van de gebruikte methodologie en de uitgevoerde werkzaamheden. Het biedt een overzicht van de genomen stappen tijdens het onderzoek.
+
+%Dit geautomatiseerde proces bespaart tijd voor de werkgever en de sollicitant.
+
+%Na het verkrijgen van de testresultaten kan de werkgever de sollicitant of huidige werknemer cursussen aanbieden om zijn computervaardigheden bij te schaven. Op die manier zijn werknemers up-to-date met bedrijfsspecfieke software en beschikken ze over basis ICT-kennis. Dit kan een eerste stap zijn naar het verkleinen van de digitale kloof.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
+%Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
 
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
+%Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
 
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+%Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
 
+De uitvoering van dit project is gericht op het bieden van een gedetailleerd en objectief overzicht van de computervaardigheden van individuele gebruikers. Door de geavanceerde beoordelingsmethoden die in de webapplicatie zijn geïntegreerd, verwachten we dat de testresultaten een nauwkeurige weergave zullen bieden van zowel de sterke als zwakke punten van de gebruikers in verschillende ICT-gebieden. Deze gebieden omvatten basisvaardigheden zoals tekstverwerking, e-mailbeheer, bestandsbeheer en het gebruik van online hulpmiddelen.
+
+De verwachte resultaten worden gepresenteerd in de vorm van overzichtelijke grafieken en tabellen, waarbij elke as specifieke vaardigheidsgebieden en competentieniveaus aangeeft. Deze grafische weergaven zijn ontworpen om zowel gebruikers als werkgevers een helder inzicht te geven in de gebieden waar verbetering mogelijk is. Dit zal werknemers aanmoedigen om gerichte workshops of bijscholingscursussen te volgen, gericht op de gebieden waar ze tekortschieten.
+
+Verder verwachten we dat de implementatie van deze tool een positieve impact zal hebben op de productiviteit op de werkplek. Werkgevers zullen in staat zijn om op een efficiënte wijze de digitale vaardigheden van hun werknemers te evalueren en gericht te investeren in hun verdere ontwikkeling. Dit zal niet alleen de individuele prestaties verbeteren maar ook bijdragen aan een algemene verhoging van de digitale competentie binnen de organisatie, wat essentieel is in de steeds verder digitaliserende werkomgeving.
+
+De succesvolle implementatie van deze tool zal naar verwachting een aanzienlijke stap voorwaarts zijn in het verkleinen van de digitale kloof in het bedrijfsleven. Het biedt een praktische oplossing voor het identificeren en aanpakken van tekortkomingen in digitale vaardigheden, wat een fundamentele bijdrage levert aan de algehele digitaliseringsinspanningen binnen bedrijven.
