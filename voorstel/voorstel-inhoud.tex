@@ -20,17 +20,15 @@
 
 %Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
 
+%introductie tot het onderwerp
+%Een correct registratie van de gepresteerde uren is voor veel bedrijven, waaronder Inetum-Realdolmen, een zeer belangrijke kwestie. Deze uren zijn de basis om facturatie te kunnen doen en op deze manier inkomsten te vergaren uit geleverde diensten. Onder deze tijdsregistratie verstaan we het proces van het registreren, ook wel bijhouden, van uren die werknemers aan een bepaalde taak besteden.
+In het huidige bedrijfsklimaat, waar flexibel werken en mobiele toegankelijkheid steeds meer de norm worden, is de noodzaak voor geavanceerde tijdregistratiesystemen belangrijker dan ooit. Accurate tijdregistratie speelt een cruciale rol in diverse aspecten van bedrijfsvoering, waaronder projectmanagement, loonadministratie, en klantfacturatie. Volgens een artikel door \textcite{Gupta2023} over tijdregistratie in projectmanagement, kan de implementatie van dergelijke systemen helpen om de productiviteit te verhogen, overuren te verminderen en projectbudgetten nauwkeuriger te beheren. Inetum-Realdolmen, een IT-consultancybedrijf, staat voor de uitdaging om deze processen te optimaliseren en te automatiseren om de efficiëntie en nauwkeurigheid te verhogen. Bovendien benadrukt de potentie van real-time tracking en tracing systemen binnen de logistieke netwerken, wat aangeeft hoe essentieel accurate tijdregistratie is voor het verbeteren van de operationele efficiëntie en het leveren van waarde aan klanten \autocite{TrackingAndTracingSystems}.
 
-In onze huidige maatschappij wordt in bijna elke job gebruikgemaakt van digitale technologieën. Vooral na de COVID-19-pandemie nam het belang van computervaardigheden toe, doordat meer werknemers op afstand gingen werken \autocite{NBERw27422}. Zoals blijkt uit gegevens van de Federale Overheidsdienst Economie, beschikken individuen met een lager opleidingsniveau, lager inkomen of hogere leeftijd vaak niet over de nodige computervaardigheden waardoor ze digitaal uitgesloten worden \autocite{FederalPublicServiceEconomyKloof}.
+Dit onderzoek richt zich op de ontwikkeling van een tijdsregistratie-app voor Android, die gebruikmaakt van locatiegebaseerde technologieën om een geautomatiseerde registratie van werkuren mogelijk te maken. Dit systeem omvat niet alleen de nauwkeurigheid van tijdregistratie te verbeteren, maar ook administratieve lasten te verminderen en inzicht te verschaffen in de werkpatronen van medewerkers.
 
-Daarom, in lijn met de 'Digital Decade' visie van de Belgische overheid, die streeft naar een digitaal competente samenleving tegen 2030 \autocite{DigitalDecade2030}, richt dit onderzoeksvoorstel zich op het verminderen van de digitale kloof op de werkvloer. Het doel is om zowel sollicitanten als huidige werknemers met een beperkte ICT-kennis (bijvoorbeeld arbeiders, magazijniers, logistiek medewerkers) te testen op hun computervaardigheden zodat zij zich, indien gewenst, kunnen bijscholen.
+Centraal in dit onderzoek staat de vraag 'Hoe kan een tijdsregistratie-app bijdragen tot het verifiëren en rapporteren van werkuren met als doel correcte facturatie en opvolging?'. Hierbij zullen de volgende deelvragen worden onderzocht: Welke functionaliteiten moet de Android-app bevatten om gemakkelijk te kunnen worden gebruikt door zowel werknemers als management? Welke technologieën zijn het meest geschikt voor het nauwkeurig vaststellen van de locatie van een gebruiker om het registratieproces te vereenvoudigen? En hoe kan de verzamelde data op een veilige manier naar een centrale database worden verstuurd?
 
-Centraal in dit onderzoek staat de vraag: 'Hoe kan een webapplicatie de computervaardigheden van deze werknemers beoordelen en bijdragen aan het verminderen van digitale uitsluiting?'. Om deze digitale kloof te overbruggen is er behoefte aan een webtool om de computervaardigheden van personen te kunnen beoordelen.
-Deze tool geeft aan welke computervaardigheden sollicitanten het best kunnen verbeteren en helpt werkgevers bij het beoordelen van sollicitanten. Het doel van de webtool is de digitale kloof op de werkvloer te verkleinen.
-
-Het uiteindelijke resultaat van deze studie is een proof-of-concept voor een webapplicatie, wa\-arbij de gebruiker een score ontvangt gebaseerd op correctheid, tijd en het aantal hints bij elke vraag. Deze scores geven inzicht in de huidige digitale vaardigheden en dienen bovendien ook als leidraad voor gerichte training en ontwikkeling, met als doel het verkleinen van de digitale kloof.
-
-De kern van dit onderzoek richt zich op het ontwerpen en ontwikkelen van computervaardigheidstesten, waarbij de focus ligt op het correct opstellen van de testen en het berekenen van de resultaten. Voor deze doeleinden wordt gebruik gemaakt van een eenvoudige website en virtualisatietechnieken. Dit houdt in dat, hoewel het project technische aspecten zoals webontwikkeling en virtualisatie bevat, de nadruk voornamelijk ligt op de ontwikkeling van de testen zelf en op de communicatie tussen de testomgeving en de website.
+De kern van dit onderzoek richt zich op het ontwerpen van een Android app met bijhorende Java Enterprise Edition back-end die niet alleen waardevol is voor het management en de HR-afdeling binnen Inetum-Realdolmen, maar ook voor de werknemers zelf door het bieden van een transparante en eerlijke registratie van hun arbeidstijd. Het uiteindelijke resultaat van deze studie is een proof-of-concept voor een tijdsregistratie-app.
 
 %---------- Stand van zaken ---------------------------------------------------
 
@@ -56,46 +54,32 @@ De kern van dit onderzoek richt zich op het ontwerpen en ontwikkelen van compute
 
 %Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
 %PROBLEEMSTELLING
-\subsection{Digitale Kloof en haar Impact}
-Uit een onderzoek van de \textcite{VlaamseVeerkracht} naar de digitale vaardigheden bij burgers blijkt dat 46\% van de Vlaamse bevolking tussen 16 en 74 jaar niet beschikt over de nodige digitale basisvaardigheden: 37\% heeft lage digitale vaardigheden en 8\% heeft geen digitale vaardigheden of heeft in de voorbije 3 maanden geen internet gebruikt.
-Bovendien bevestigt \textcite{DigitaleInclusieBarometer} in een onderzoek over de digitale inclusie van de Koning Boudewijnstichting dat een groot deel van de Belgen kwetsbaar zijn voor uitsluiting van essentiële diensten zoals werk, onderwijs en gezondheidszorg omdat zij over onvoldoende digitale vaardigheden beschikken.
+\subsection{Analyse}
+Een analyse is essentieel voor het creëren van een kwaliteitsvol softwareontwikkelingsproject. \\Het houdt in dat er samen met de klant, in dit geval Inetum-Realdolmen, wordt overlegd om de behoeften en wensen te identificeren. Dit is een cruciaal onderdeel van het project, omdat het de fundering legt voor de latere ontwikkeling van de applicatie. Recent onderzoek heeft aangetoond dat de implementatie van modelleermethoden, zoals use cases, een intuïtieve manier biedt om deze functionele eisen vast te leggen en te definiëren. Bovendien is gebleken dat het aanvullen van use cases met schermmockups de begrijpelijkheid van functionele vereisten significant kan verbeteren, waardoor de effectiviteit en efficiëntie van de analysefase bijna verdubbeld kunnen worden, zonder een significante toename in de benodigde inspanning \autocite{EffectScreenMockups}. Deze bevindingen benadrukken het belang van visuele hulpmiddelen bij het vergemakkelijken van de communicatie tussen ontwikkelaars en klanten tijdens de analysefase.
 
-De digitale ongelijkheid is een realiteit. \textcite{IedereenDigitaleKloof} van het Vlaams Steunpunt Nieuwe Geletterdheid merkt in een artikel op dat de digitale kloof geen ééndimensioneel probleem is. Naast het bezit van computers en de instrumentele vaardigheden bestaat de digitale kloof immers uit nog andere facetten. Zo heeft men tevens informatievaardigheden nodig. Dit zijn methodes om online informatie op te sporen: zoeken, selecteren, begrijpen, evalueren en verwerken. Maar zelfs tot het toepassen van digitale informatievaardigheden op een eenvoudig niveau, namelijk het gebruiken van een zoekmachine, is 1/3 van de Belgische bevolking niet in staat.
-Daarbij heeft de coronapandemie de digitalisering van de maatschappij aanzienlijk versneld. Zoals aangegeven door \textcite{VlaamseVeerkracht} ging het digitaliseringsproces de afgelopen jaren gepaard met het geleidelijk verdwijnen van een aantal fysieke loketten. Daar konden nochtans vele burgers terecht en werden ze geholpen als ze administratieve problemen hadden. Deze toegenomen digitalisering heeft gevolgen op veel maatschappelijke domeinen zoals bankdiensten, mobiliteit, gezondheidszorg en onderwijs.
+\subsection{Locatiegebaseerde technologieën}
+Geofencing en iBeacon zijn twee soorten locatiegebaseerde technologieën. Geofencing gebruikt GPS of RFID-technologie om een virtuele geografische grens te creëren, waarmee de app automatisch check-in en check-out tijden kan registreren zodra een werknemer een locatie binnenkomt of verlaat. iBeacon-technologie, gebaseerd op Bluetooth Low Energy (BLE), stelt apparaten in staat om signalen te zenden en te ontvangen binnen een klein bereik, wat verder verfijnt hoe aanwezigheid kan worden gedetecteerd en geregistreerd. Onderzoek door \textcite{Singh2018Geofencing} over locatie gebaseerde services met Geofencing en onderzoek over binnenshuis positioneering met mobile apparaten door \textcite{iBeaconDeployment} heeft de potentie van deze technologieën voor diverse toepassingen, waaronder tijdregistratie, aangetoond.
 
-%\subsection{Belang van Computervaardigheden}
-Dit onderzoeksvoorstel richt zich op de digitalisering in de werkomgeving, met speciale aandacht voor sollicitanten en huidige werknemers met beperkte ICT-kennis zoals arbeiders, magazijniers en logistiek medewerkers. Het doel is om hun computervaardigheden te testen en hen de mogelijkheid te bieden zich bij te scholen, in lijn met het doel van de Vlaamse overheid om minstens 80\% van de bevolking digitaal vaardig te maken.
-Deze studie focust op het testen van essentiële digitale vaardigheden zoals gedefinieerd in het DigComp-raamwerk van het Joint Research Centre van de Europese Commissie. Deze omvatten het opzoeken en verwerken van informatie, het maken van PDF-documenten, het vinden van bestanden op de computer, e-mailen en het uploaden van bestanden \autocite{DigCompFramework}. Deze vaardigheden zijn cruciaal voor een effectieve digitale communicatie en organisatie in de moderne werkomgeving.
+\subsection{Beveiligde verbinding}
+Het veilig verzenden van gevoelige gegevens van de Android app naar een centrale server is een cruciaal aspect van de ontwikkeling van de tijdsregistratie-app. Uit onderzoek over API beveileging door \textcite{APISecurity} benadrukt de noodzaak van encryptie en andere beveiligingsmaatregelen om de integriteit en vertrouwelijkheid van de gegevens te waarborgen.
+Om een beveiligde verbinding te creëren tussen de app en de back-end, zal gebruik gemaakt worden van een authenticatie service. Deze service zal de gebruiker toestaan om zich te authenticeren en toegang te krijgen om data te versturen naar de database.
 
-\subsection{Beoordeling computervaardigheden}
-Om de computervaardigheden van individuen op een betrouwbare en nauwkeurige manier te beoordelen, is het ontwikkelen van een webapplicatie met concrete ICT-opdrachten gepland. Traditionele vragenlijsten, zoals die op de website van de VDAB, zijn voornamelijk theoretisch van aard en geven geen nauwkeurig beeld van de praktische vaardigheden.
-De geplande webapplicatie zal in tegenstelling tot deze traditionele methoden praktijkgerichte oefeningen bevatten. Dit is in overeenstemming met bevindingen uit onderzoek dat aangeeft dat het onderhouden van georganiseerde informatierepositories bijdraagt aan een groter vertrouwen in eigen kennis \autocite{JudgingKnowledge}.
-Daarnaast onderstrepen de DESI-rapporten 2021 en 2022 de noodzaak van dit onderzoek. Het DESI 2022-rapport benadrukt dat, hoewel België aanzienlijke vooruitgang heeft geboekt op het gebied van digitale connectiviteit en de integratie van digitale technologieën in bedrijven, er nog steeds aanzienlijke ruimte is voor verbetering in digitale vaardigheden \autocite{DESIRaport}. Deze  informatie ondersteunt de relevantie van het onderzoeksvoorstel binnen het bredere maatschappelijke en economische kader van België.
-Ten slotte biedt het DigComp-raamwerk van het Joint Research Centre van de Europese Commissie een nuttig referentiekader voor het definiëren van digitale competenties en vaardigheden, wat relevant kan zijn voor de ontwikkeling van de webapplicatie \autocite{DigCompFramework}.
+\subsection{Application Programming Interface}
+Het is noodzakelijk om communicatie tussen de Android applicatie en de database mogelijk te maken. Hiervoor wordt een Application Programming Interface (API) ontwikkeld. 'Een API biedt een eenvoudige manier om verbinding te maken met softwaresystemen en deze te integreren en uit te breiden.' \autocite{biehl2015api}. De noodzaak van een API in dit onderzoeksproject ontstaat uit de behoefte om de gegevens van de app naar de database te sturen. De API zal de gegevens van de app ontvangen en verwerken, en vervolgens naar de database sturen. De API zal ook de gegevens van de database naar de app sturen. Dit kan bijvoorbeeld gebruikt worden om de gebruiker te voorzien van een overzicht van zijn geregistreerde uren.
 
-%SOFTWARE
-%uitleggen website
-\subsection{Rol van webapplicaties in vaardigheidstesten}
-Bovenvermelde informatie rechtvaardigt de k\-euze voor een webapplicatie. Gebruikers met onvoldoende basiskennis van ICT slagen er vaak niet in om software correct te installeren. Het gebruik van een webapplicatie maakt het mogelijk om de testen in een veilige virtuele omgeving uit te voeren zodat de gebruiker geen schade kan aanbrengen aan zijn eigen digitale omgeving. De webapplicatie zal dus fungeren als een communicatiemiddel tussen de Windows-omgeving, waar de testen zullen worden uitgevoerd, en de gebruiker.
+\subsection{Database Management System}
+Een databasebeheersysteem (DBMS) middleware waarmee programmeurs, databasebeheerders (DBA's), softwaretoepassingen en eindgebruikers gegevens in een database kunnen opslaan, organiseren, openen, opvragen en manipuleren \autocite{Rouse2024}. Een DBMS maakt het niet alleen mogelijk voor opslag van gegevens, zoals de locatie van de gebruiker, de aankomsttijd op deze locatie, en het tijdstip van vertrek, maar biedt ook geavanceerde functionaliteiten voor het beheren van deze data. Dit omvat het aanpassen, verwijderen, of toevoegen van gebruikersinformatie door middel van een gestructureerde en efficiënte benadering.
 
-%uitleggen OS
-De keuze voor een Windows-omgeving om computervaardigheidstesten uit te voeren, is ingegeven door de brede verspreiding en populariteit van Windows als besturingssysteem. Volgens een rapport van \textcite{StatCounterOSMarketShare} heeft Windows een aanzienlijk marktaandeel in desktopbesturingssystemen in België, wat aangeeft dat het algemeen bekend en geaccepteerd is in de professionele wereld. Dit wordt verder ondersteund door het feit dat Windows vaak het standaard besturingssysteem is bij de aanschaf van nieuwe computers \autocite{ProfolusWindowsPopularity}.
+De keuze van het juiste databasebeheersysteem is essentieel, aangezien het de basis vormt voor het waarborgen van de integriteit, beschikbaarheid en veiligheid van gebruikersgegevens. Volgens een artikel op door \textcite{SilnitskyDatabase} over hoe je een correcte DBMS kiest bij jouw applicatie, moet bij het selecteren van een DBMS rekening gehouden worden met verschillende factoren, zoals schaalbaarheid, betrouwbaarheid en de efficiëntie in dataretentie en -verwerking. Deze criteria zijn bijzonder belangrijk gezien de gevoelige aard van de te beheren data, waaronder locatiegegevens en tijdregistraties, die zowel nauwkeurigheid als privacy vereisen.
 
-%uitleggen VM
-\subsection{Gebruik van virtualisatietechnologieën}
-De Windows-omgevingen kunnen worden opgezet via virtualisatie. 'Met virtualisatie wordt een gesimuleerde, oftewel virtuele, computeromgeving gemaakt, dit in tegenstelling tot een fysieke omgeving. Bij virtualisatie gaat het vaak om door een computer gegenereerde versies van hardware, besturingssystemen, opslagapparaten en meer.' \autocite{MicrosoftVirtualisationDefinition}.
+%\subsection{Tijdregistratiesystemen}
+%Recente ontwikkelingen in tijdregistratiesystemen hebben aangetoond dat de overstap van handmatige naar digitale methoden bedrijven helpt bij het verbeteren van de nauwkeurigheid van werkurenregistratie en het verminderen van fraude. Studies zoals die van \textcite{TimeTrackingTechEvolution} illustreren hoe digitale systemen bijdragen aan betere werkurenmanagement en operationele efficiëntie.
 
-Een virtualisatiesoftwarepakket, zoals VirtualBox, wordt gebruikt om virtuele machines te creëren en te beheren op een fysieke computer of server. Dit maakt het mogelijk om meerdere virtuele Windows-omgevingen te maken, elk met de vereiste applicatie voor het beoordelen van testen. De keuze voor VirtualBox is gebaseerd op verschillende factoren, waaronder het feit dat het een populaire en open source virtualisatiesoftware is. Verder biedt VirtualBox handige functies zoals het maken van snapshots, waardoor het beheer van virtuele machines efficiënter wordt en het gebruik van bronnen wordt geoptimaliseerd. VBoxManage is een command-line tool waarmee VirtualBox volledig bestuurd kan worden.
+%\subsection{Impact van Nauwkeurige Tijdregistratie}
+%Nauwkeurige tijdregistratie is cruciaal voor bedrijfsvoering, vooral in sectoren waar facturatie gebaseerd is op gepresteerde uren. Onderzoek door \textcite{BillingAccuracyImportance} benadrukt hoe precieze tijdregistratie direct invloed heeft op de winstgevendheid en klanttevredenheid. Daarnaast biedt het inzichten in personeelsproductiviteit en projectmanagementefficiëntie.
 
-%uitleggen connectie VM met website
-\subsection{Interactie met testomgeving}
-Om interactie mogelijk te maken met een Wi\-ndows-omgeving en deze te integreren in een webapplicatie, is een tool nodig die verbinding kan maken met deze Windows-omgeving. Apache Guacamole is een uiterst geschikt framework dat ondersteuning biedt voor een breed scala aan protocollen, waaronder VNC, RDP, SSH en meer. Hierdoor kun je verschillende soorten externe verbindingen beheren en naadloos schakelen tussen diverse systemen zonder de noodzaak van aparte tools.
-Met Apache Guacamole kan een beveiligde verbinding worden gemaakt met de virtuele Windows-omgeving. Dit stelt de gebruiker in staat om veilig en efficiënt te werken in de Windows-omgeving via de webapplicatie. \autocite{ApacheGuacamole}.
-
-%uitleggen API
-\subsection{API's en systeemintegratie}
-Het is noodzakelijk om communicatie tussen de testen op de virtuele machine en de webapplicatie mogelijk te maken. Hiervoor wordt een Application Programming Interface (API) ontwikkeld. 'Een API biedt een eenvoudige manier om verbinding te maken met softwaresystemen en deze te integreren en uit te breiden.' \autocite{biehl2015api}. De noodzaak van een API in dit onderzoeksproject ontstaat uit de beperkingen van de webapplicatie om direct te interageren met de Windows-omgevingen, waar de computervaardigheidstests worden uitgevoerd. De API speelt een cruciale rol bij het opslaan van testresultaten en het beschikbaar stellen ervan aan de webapplicatie. Bovendien zal de API gebruikt worden om de virtuele machines op afstand te beheren en te starten.
-
+%\subsection{Open Vragen en Uitdagingen}
+%Deze literatuurstudie legt de basis voor het onderzoek naar de ontwikkeling van een tijdsregistratie-app die geofencing en iBeacon-technologie integreert om automatische en nauwkeurige werkurentracking te faciliteren. Door deze technologieën toe te passen, beoogt dit project de efficiëntie van tijdsregistratie te verbeteren en een betrouwbare basis te bieden voor facturatie en projectbeheer binnen organisaties.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
@@ -113,37 +97,17 @@ Het is noodzakelijk om communicatie tussen de testen op de virtuele machine en d
 
 %Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
 
-In de initiële fase van het project, die twee weken duurt, wordt een requirements-analyse uitgevoerd. De focus ligt hierbij op het identificeren van relevante digitale testen die ontwikkeld kunnen worden.
-Daarnaast worden de technische en functionele vereisten voor de API, de webapplicatie en de virtuele Windows-omgeving gedetailleerd vastgesteld. Ten slotte omvat deze fase het ontwikkelen van een intuïtief en gebruikersvriendelijk ontwerp voor de UI/UX van de webapplicatie.
+In deze initiële fase, die twee weken duurt, wordt een grondige behoeftenanalyse uitgevoerd om de specifieke vereisten van de tijdsregistratie-app te identificeren. Dit omvat interviews met belanghebbenden binnen Inetum-Realdolmen. Door deze interacties worden zowel de functionele als de niet-functionele vereisten van de app geïdentificeerd, waarna deze informatie wordt vertaald naar concrete deliverables, inclusief gedetailleerde mockups van de app.
 
-De volgende fase van het project heeft een duur van 3 weken. In deze periode wordt een API ontworpen. Deze API is bedoeld voor het beheren en opstarten van virtuele machines met VBoxManage. Daarnaast zal de API testresultaten opslaan en deze toegankelijk maken voor de webapplicatie. Een belangrijke functionaliteit van de API is ook het vermogen om virtuele machines op afstand te starten.
+De volgende fase van het project heeft een duur van 3 weken. In deze periode wordt een studie gedaan naar geofencing en iBeacon-technologie. Als ook naar hoe een beveiligde verbinding tussen de database en API kan opgezet worden. Deze fase levert een overzicht van bestaande technologieën en systemen.
 
-In de derde fase, die ook twee weken duurt, wordt de website opgezet om verbinding te maken met de virtuele omgeving. Deze wordt geconfigureerd met Apache Guacamole, waardoor gebruikers, zodra zij een test starten op de webapplicatie, kunnen interacteren met de Windows-omgeving.
+De derde fase neemt 6 weken in beslag. Deze fase richt zich op de ontwikkeling van de Android-app en de Java Enterprise Edition back-end. De ontwikkeling omvat ook de integratie van geofencing en iBeacon-technologie. Hierbij is het resultaat de eerste versie van de app en back-end systeem.
 
-De vierde fase neemt 4 weken in beslag. Hierbij worden de vaardigheidstesten ontwikkeld waarvan de data na afloop doorgestuurd wordt naar de API. Er wordt een applicatie ontwikkeld die in de Windows-omgeving zal runnen. De applicatie zal samen met de virtuele Windows-omgeving opstarten. Deze zal een scenario aan de gebruiker geven waarin hij enkele realistische taken moet uitvoeren. Deze applicatie zal de gemaakte taken controleren en een resultaat toekennen.
-
-In de vijfde fase van het project, die 2 weken zal duren, worden de testresultaten vanuit de API opgehaald en in de webapplicatie weergegeven. De testen zijn opgesteld met als doel de gebruiker te helpen bij het ontwikkelen en verbeteren van zijn computervaardigheden.
+In de vierde fase van het project, die 2 weken zal duren, wordt een sales pitch en een demonstratie van de app voorbereid. Dit omvat een presentatie van de functionaliteiten, de gebruiksvriendelijkheid, en de bedrijfswaarde van de app.
 
 Tot slot wordt in de laatste fase van het project, die twee weken duurt, een scriptie opgesteld. Hierin worden het volledige onderzoek en de behaalde resultaten gedetailleerd beschreven. De scriptie vormt een uitgebreid verslag van het uitgevoerde onderzoek, inclusief een beschrijving van de gebruikte methodologie en de uitgevoerde werkzaamheden. Het biedt een overzicht van de genomen stappen tijdens het onderzoek.
 
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=\linewidth]{./graphics/flowchart.png}
-  \caption{Flowchart}
-  \label{fig:flowchart}
-\end{figure}
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=\linewidth]{./graphics/gantt.png}
-  \caption{Gantt Diagram}
-  \label{fig:gantt}
-\end{figure}
-
-%Dit geautomatiseerde proces bespaart tijd voor de werkgever en de sollicitant.
-
-%Na het verkrijgen van de testresultaten kan de werkgever de sollicitant of huidige werknemer cursussen aanbieden om zijn computervaardigheden bij te schaven. Op die manier zijn werknemers up-to-date met bedrijfsspecfieke software en beschikken ze over basis ICT-kennis. Dit kan een eerste stap zijn naar het verkleinen van de digitale kloof.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
@@ -155,4 +119,4 @@ Tot slot wordt in de laatste fase van het project, die twee weken duurt, een scr
 
 %Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
 
-De uitvoering van dit project zal resulteren in een webapplicatie die zowel gebruikers als werkgevers voorziet van nauwkeurige inzichten in computervaardigheden. Gebruikers krijgen een  overzicht van hun sterke en zwakke punten, terwijl werkgevers het ICT-kennisniveau van sollicitanten en werknemers kunnen beoordelen. Afhankelijk van de testresultaten, kunnen werkgevers gerichte bijscholingsmogelijkheden aanbieden. Uiteindelijk zal deze tool bijdragen aan het verkleinen van de digitale kloof in het bedrijfsleven door het bieden van een praktische oplossing voor het identificeren en aanpakken van tekorten in digitale vaardigheden.
+De implementatie van dit project zal naar verwachting leiden tot de ontwikkeling van een innovatieve tijdsregistratie-app voor Android, die een significante verbetering biedt ten opzichte van traditionele tijdregistratiemethoden. Door de integratie van locatiegebaseerde technologieën, zal de app automatisch de aanwezigheidsuren van werknemers registreren, wat leidt tot een nauwkeuriger en efficiënter proces voor het vastleggen van werktijden. Dit heeft impact op facturatie, loonadministratie, en projectmanagement binnen organisaties zoals Inetum-Realdolmen.
